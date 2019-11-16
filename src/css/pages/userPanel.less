@@ -1,0 +1,62 @@
+.user-panel{
+    position: relative;
+    display: grid;
+    max-width: 1200px;
+    grid-column-gap: 2em;
+    grid-template-columns: 1fr 1fr ;
+    margin: 0 2em;
+   &--login{
+    display: grid;
+    grid-gap: 10px;
+    position: fixed;
+    right: 0;
+    background-color: var(--white);
+    padding: 40px;
+    &--input-wrap{
+        display: flex;
+        flex-direction: column;
+    }
+   }
+   &--persons{
+       &--header{
+        display: flex;
+        align-items: center;
+       }
+       &--table{
+        border-collapse: collapse;
+        text-align: left;
+        width: 100%;
+        th {
+            vertical-align: bottom;
+            color:  var(--nav-bg-color);
+            background-color: none;
+            padding: 20px 10px;
+            margin: 0;
+            width: auto;
+            max-width: 160px;
+            min-width: 160px;
+            font-size: 18px;
+            top: -1px;
+            vertical-align: baseline;
+        }
+
+        td{
+            margin: 0;
+            cursor: pointer;
+            font-size: 14px;
+            vertical-align: center;
+            padding: 15px 10px;
+            word-wrap: break-word;
+        }
+
+        &--avatar{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+            margin-right: 10px;
+           }
+       }
+   }
+}

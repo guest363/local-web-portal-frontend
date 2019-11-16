@@ -1,0 +1,267 @@
+.wiki {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    &--search {
+      display: flex;
+      position: absolute;
+      top: 5px;
+      width: 378px;
+      justify-content: space-between;
+      align-items: center;
+      height: 35px;
+      &--header {
+        font-size: 1em;
+        padding: 0;
+        margin: 0;
+      }
+      &--input{
+        width: 100%;
+        height: 100%;
+        padding: 0 1em;
+        margin-right: 60px;
+        border: 1px solid var(--input--border);
+        border-right: none;
+      }
+      &--button {
+        color: var(--grey);
+        position: absolute;
+        right: 0;
+        background: white;
+        height: 100%;
+        width: 60px;
+        border: 1px solid var(--input--border);
+      }
+    }
+    &--posts {
+      flex-grow: 2;
+      height: auto;
+      overflow: auto;
+      &--header {
+        text-align: center;
+      }
+    }
+    &--menu {
+      flex-grow: 1;
+      max-width: 250px;
+    }
+    &--grid {
+      display: grid;
+      max-width: 1200px;
+      grid-column-gap: 2em;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row-gap: 2em;
+      margin: 2em auto;
+      &--2col{
+        display: grid;
+        max-width: 1200px;
+        grid-column-gap: 2em;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 2em;
+        margin: 2em auto;
+      }
+      &--card {
+        display: grid;
+        padding: 2em;
+        position: relative;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1.5fr;
+        background-color: var(--nav-bg-color);
+        cursor: pointer;
+        h3, span{
+          color: white;
+        }
+        &--counter {
+          position: absolute;
+          bottom: 10px;
+          right: 2em;
+          width: 1.5em;
+          height: 1.5em;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+        }
+      }
+    }
+ }
+
+  .wiki-edit {
+    &--placeholder {
+      grid-area: tools;
+    }
+    &--card{
+      display: flex;
+      width: auto;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-bottom: 20px;
+      border-radius: 2px;
+      font-family: "Montserrat", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      overflow: hidden;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      &__clikabl {
+        cursor: pointer;
+      }
+      & pre {
+        padding: 12px 24px;
+        word-wrap: break-word;
+        margin: 0 -24px;
+        white-space: pre-line;
+        background-color: var(--pre-bg-color);
+        color: var(--pre-color);
+      }
+      & blockquote {
+        margin: 0;
+        padding: 40px;
+        color: #3F484D;
+        position: relative;
+        text-align: center;
+        &:before {
+          font-size: 45px;
+          color: var(--nav-bg-color);
+          position: absolute;
+          height: 1px;
+          left: 40px;
+          right: 40px;
+          line-height: .5;
+          background: linear-gradient(to right, #424c55 45%, transparent 45%, transparent), linear-gradient(to right, transparent, transparent 55%, #424c55 55%);
+          content: "\201C";
+          top: 30px;
+        }
+         &:after {
+            font-size: 1px;
+            color: var(--nav-bg-color);
+            position: absolute;
+            height: 1px;
+            left: 40px;
+            right: 40px;
+            line-height: .5;
+            background: #424c55;
+            content: "\201D";
+            bottom: 30px;
+        }
+        }
+      &--header {
+        padding: 14px 24px;
+        border-bottom: 1px solid #e5e5e5;
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 400;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        position: relative;
+        background-color: var(--nav-bg-color);
+        color: var(--nav-color);
+        &--select {
+          border: none;
+          outline: none;
+          cursor: pointer;
+          font-size: 20px;
+          margin-top: 3px;
+          color: var(--nav-color);
+        }
+      }
+      &--content {
+        padding: 10px 24px 1em 24px;
+        background: white;
+        border-bottom: 1px solid #e5e5e5;
+        flex-grow: 2;
+        & p {
+          margin: 5px 0;
+          text-indent: 0;
+        }
+        & img{
+          max-width: calc(100% + 48px);
+          margin-left: -24px;
+        }
+      }
+      &--footer {
+        padding: 0.5em 24px; 
+        background: white;
+        display: flex;
+        flex-direction: column;
+        color: var(--grey);
+        &--tags{
+          display: grid;
+          grid-template-columns: repeat(auto-fill, 100px);
+          grid-column-gap: 1em;
+          grid-row-gap: 1em;
+          &--tag{
+            background-color: var(--nav-bg-color);
+            color: white;
+            padding: 0px 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 30px;
+            align-items: center;
+          }
+        }
+      }
+      &--button{
+        padding: 10px 20px;
+        border: 1px solid var(--button-border-color);
+        background: var(--white);
+        color: var(--nav-bg-color);
+        outline: none;
+        cursor: pointer;
+        font-size: 14px;
+        text-align: left;
+        margin: 0;
+        &:hover{
+          color: var(--white);
+          background: var(--nav-bg-color);
+        }
+        &__wraper {
+            position: absolute;
+            right: -3px;
+            top: 65px;
+            background-color: white;
+            padding: 3px;
+            display: flex;
+            flex-direction: column;
+        }
+      }
+    }
+    &--header {
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+    }
+    &--wrapper {
+      display: grid;
+      grid-template-columns: 650px 300px;
+      grid-template-rows: auto;
+      grid-column-gap: 5em;
+      grid-row-gap: 1em;
+      padding: 2em;
+      margin: 0 auto;
+      .ql-toolbar{
+        position: fixed;
+        z-index: 700;
+        background-color: white;
+        max-width: 750px;
+        z-index: 800;
+        top: 130px;
+        left: 72%;
+        width: 300px !important;
+      }
+      .edit--tags__wrapper {
+        position: fixed;
+        left: 72%;
+        top: 250px;
+        width: 300px;
+      }
+    }
+  }

@@ -1,0 +1,63 @@
+.dropZone {
+    border: 2px dashed var(--grey);
+    border-radius: 0px;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+  
+    &.highlight {
+      border-color: var(--button--hover--bg);
+    }
+  
+    &--hide {
+      width: 20px;
+      height: 20px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+  
+  .dropZone--form {
+    margin-bottom: 10px;
+    &--text {
+      margin-top: 0;
+      &--limits {
+        font-size: 12px;
+      }
+    }
+    &--button {
+      padding: 10px;
+      cursor: pointer;
+      margin-top: 0;
+      border: 1px solid #ccc;
+      &:hover {
+        background: var(--button--hover--bg);
+      }
+    }
+  }
+  
+  .dropZone--gallery {
+    margin-top: 10px;
+    &--full {
+      display: none;
+      &--img {
+        width: 250px;
+        max-width: 100%;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+    }
+    &--thumbnail {
+      &--img {
+        width: 150px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+    }
+  }

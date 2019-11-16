@@ -1,0 +1,69 @@
+.monitoring {
+    &--wrapper{
+        margin-bottom: 3em;
+        width: 100%;
+        align-self: flex-start;
+    }
+    &--img{
+        &__status{
+            max-width: 25px;
+        }
+    }
+    &--list {
+        list-style-type: none;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+    &--table { 
+        border-collapse: collapse;
+        text-align: left;
+        width: 100%;
+        /* Фон нечетным эл. другой */
+        tr:nth-child(odd){
+            background-color: var(--tr-odd-color);
+        }
+        th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #eceeef;
+            color: #fff;
+            background-color: var(--nav-bg-color);
+            border-top: 1px solid #eceeef;
+            padding: 20px 10px;
+            margin: 0;
+            width: auto;
+            cursor: pointer;
+            position: sticky;
+            font-size: 14px;
+            top: -1px;
+            vertical-align: baseline;
+        }
+
+        td{
+            height: auto;
+            margin: 0;
+            cursor: pointer;
+            font-size: 14px;
+            vertical-align: center;
+            border-top: 1px solid #eceeef;
+            padding: 15px 10px;
+            word-wrap: break-word;
+        }
+    }
+}
+
+#terminal-container {
+    width: 960px;
+    height: 600px;
+    margin: 0 auto;
+    padding: 2px;
+  }
+  #terminal-container .terminal {
+    background-color: #111;
+    color: #fafafa;
+    padding: 2px;
+  }
+  #terminal-container .terminal:focus .terminal-cursor {
+    background-color: #fafafa;
+  }

@@ -1,0 +1,66 @@
+
+  #editor-container {
+    height: auto;
+    min-height: 100%;
+  }
+  #editor-container{
+    overflow-y: visible; 
+
+  }
+  .ql-editor {
+      background-color: var(--white);
+  }
+  .edit--button--wrapper {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-column-gap: 1em;
+    margin-top: 10px;
+  }
+  
+  .edit {
+    width: 100%;
+    &--cloud{
+        &--tags{
+            width: 300px;
+            font-size: 1em;
+            padding: 5px;
+        }
+    }
+    &--tags{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 2em;
+        &__wrapper{
+
+        }
+        &--tag{
+            background-color: var(--nav-bg-color);
+            color: white;
+            padding: 0px 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            min-height: 30px;
+            align-items: center;
+            cursor: pointer;
+            grid-area: tags;
+        }
+    }
+  }
+  .ql-toolbar {
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    padding: 8px;
+    width: 100%;
+    position: sticky;
+    z-index: 700;
+    background-color: white;
+    max-width: 750px;
+    z-index: 800;
+    top: 0;
+    grid-area: tools;
+  }

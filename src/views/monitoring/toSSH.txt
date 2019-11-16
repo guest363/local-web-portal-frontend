@@ -1,0 +1,102 @@
+<!-- SSH ---------------------            
+            <div
+                class="section--actions--section"
+                v-bind:style="`background-color: var(--wiki--card--newArticle)`"
+            >
+                <h2>SSH</h2>
+                <div class="section--block">
+                    <span>Пароль</span>
+                    <input class="section--block--input" type="text" v-model="sshPassword">
+                </div>
+                
+            </div>
+            <div class="section--actions--section">
+                <div id="terminal-container"></div>
+            </div>--> 
+ <div class="section--actions">
+            <div class="section--actions--section__2size">
+                <div class="monitoring--wrapper">
+                    <h1 class="monitoring--h3">Мониторинг устройств сети:</h1>
+                    <table class="monitoring--table">
+                        <tbody>
+                            <tr>
+                                <th>Статус</th>
+                                <th>Имя</th>
+                                <th>IP адрес</th>
+                                <th>Тип устройства</th>
+                            </tr>
+                            <tr
+                                class="monitoring--list"
+                                v-for="host in allHosts"
+                                :key="host['_id']"
+                                @click="connectSSH(host.ip)"
+                            >
+                                <td>
+                                    <img
+                                        class="monitoring--img__status"
+                                        :src="imageSrcGen(host.online)"
+                                    >
+                                </td>
+                                <td>{{host.name}}</td>
+                                <td>{{host.ip}}</td>
+                                <td>
+                                    <span v-html="iconGenerator(host.hostType)"></span>
+                                    {{ host.hostType}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+ 
+  import { socket } from "../../constants.js";
+import { Terminal } from "xterm";
+import { WebLinksAddon } from "xterm-addon-web-links";
+import * as fit from "xterm/lib/addons/fit/fit";
+  sockets: {
+    sshConnectStage(objFromServer) {
+      console.log("SSH connect");
+      this.term.write("\r\n*** Connected to backend***\r\n");
+
+      // Browser -> Backend
+      this.term.on("data", data => {
+        this.$socket.emit("sshCommand", data);
+      });
+    },
+    // Backend -> Browser
+    sshOutput(data) {
+      console.log(data);
+      this.term.write(data);
+    },
+    sshDisconnect() {
+      this.term.write("\r\n*** Disconnected from backend***\r\n");
+    }
+  },
+
+  methods: {
+    connectSSH(ip) {
+      const query = {
+        ip: ip,
+        password: this.sshPassword,
+        cmd: ""
+      };
+      socket.emit("sshConnect", query);
+    }
+  },
+    data() {
+    return {
+      sshPassword: "",
+      sshOutput: ""
+    };
+  },
+   async mounted() {
+    
+    const terminalContainer = document.getElementById("terminal-container");
+    Terminal.applyAddon(fit);
+    this.term = new Terminal({ cursorBlink: true });
+    this.term.loadAddon(new WebLinksAddon());
+    this.term.open(terminalContainer);
+    this.term.fit(); 
+  },
+  <style src="../../../node_modules/xterm/dist/xterm.css"></style>

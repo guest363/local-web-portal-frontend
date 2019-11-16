@@ -1,0 +1,130 @@
+.sport{
+    width: 550px;
+    font-size: 12px;
+}
+.sport--add--block {
+  margin: 15px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: content-box;
+  position: relative;
+}
+.sport--add--block input {
+  margin: 0 0 0 10px;
+  width: 200px;
+  text-align: left;
+  border: 1px solid rgb(160, 160, 160);
+  padding: 0 10px;
+  height: 25px;
+}
+
+.sport--add--block select {
+    margin: 0;
+    width: 200px;
+    text-align: left;
+    border: 1px solid rgb(160, 160, 160);
+    padding: 0 10px;
+    height: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+.sport--add {
+  margin: 20px 0;
+}
+.sport--add--block--check {
+  position: absolute;
+  right: 10px;
+  top: 4px;
+  color: rgb(160, 160, 160);
+}
+
+.sport--search--step{
+    padding: 20px;
+    border: 1px solid rgb(160, 160, 160);
+}
+
+.sport--search--step__1{
+    min-height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+.sport--search--step__1 .sport--search--block{
+    position: absolute;
+    width: 90%;
+}
+
+.sport--search--block--category{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+.sport--search--block--category--item{
+ width: 25%;
+ margin: 5px 0;
+}
+
+.sport--add--block--checkbox{
+    width: 20px!important;
+}
+.sport--search--step--selectStep1{
+    margin: 0 0 0 10px;
+    width: 250px;
+    text-align: left;
+    border: 1px solid rgb(160, 160, 160);
+    padding: 0 10px;
+    height: 25px;
+}
+.sport--search--step--selectType{
+  margin: 0;
+  width: 250px;
+  text-align: left;
+  border: 1px solid rgb(160, 160, 160);
+  padding: 0 10px;
+  height: 25px;
+}
+
+
+.sport--underline {
+    border-bottom: 1px solid var(--nav-bg-color);
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+.sport--search--block--input--radio{
+      width: 20px!important;
+      height: 15px!important;
+  }
+  .sport--search--block select{
+    margin: 0;
+    width: 200px;
+    text-align: left;
+    border: 1px solid rgb(160, 160, 160);
+    padding: 0 10px;
+    height: 25px;
+  }
+  .sport--search--block input {
+    width: 100%;
+    text-align: left;
+    border: 1px solid rgb(160, 160, 160);
+    padding: 0 10px;
+    height: 25px;
+  }
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+
+  .fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+    opacity: 0;
+  }
+  .fade-enter-to, .fade-leave /* .fade-leave-active до версии 2.1.8 */ {
+    opacity: 1;
+  }
+  .sport--add--block--100{
+      width: 100%!important;
+  }
+
+svg path {
+    fill: none;
+    stroke: #76BF8A;
+    stroke-width: 1px;
+}
