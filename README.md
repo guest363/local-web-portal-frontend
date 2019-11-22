@@ -27,12 +27,12 @@
 ## Компоненты
 Сгруппированы по папкам и должны зависит от минимума деталий за их рамками.
 Компоненты в проекте:
-* [Новости](https://github.com/guest363/local-web-portal-frontend/blob/master/src/moduleNews/README.md)- новостная лента
-* [Мониторинг](https://github.com/guest363/local-web-portal-frontend/blob/master/src/moduleMonitoring/README.md) - на данный момент только отображения статуса устройст в ЛВС. Проверяется пингом. @TODO добавить возможность подключения к устройствам по SSH, все в рамках Web.
-* [Задачи](https://github.com/guest363/local-web-portal-frontend/blob/master/src/moduleTasks/README.md) - канбан доска @TODO доделать
-* [Википедия](https://github.com/guest363/local-web-portal-frontend/blob/master/src/moduleWiki/README.md) - хранилище знаний
-* [Стрельба](https://github.com/guest363/local-web-portal-frontend/blob/master/src/moduleShoot/README.md) - сохранение результатов стрельб
-* [Большой брат](https://github.com/guest363/local-web-portal-frontend/blob/master/src/moduleUSB/README.md) - контроль usb от тонких клиентов
+* [Новости](https://github.com/guest363/local-web-portal-frontend/tree/master/src/moduleNews)- новостная лента
+* [Мониторинг](https://github.com/guest363/local-web-portal-frontend/tree/master/src/moduleMonitoring) - на данный момент только отображения статуса устройст в ЛВС. Проверяется пингом. @TODO добавить возможность подключения к устройствам по SSH, все в рамках Web.
+* [Задачи](https://github.com/guest363/local-web-portal-frontend/tree/master/src/moduleTasks) - канбан доска @TODO доделать
+* [Википедия](https://github.com/guest363/local-web-portal-frontend/tree/master/src/moduleWiki) - хранилище знаний
+* [Стрельба](https://github.com/guest363/local-web-portal-frontend/tree/master/src/moduleShoot) - сохранение результатов стрельбы
+* [Большой брат](https://github.com/guest363/local-web-portal-frontend/tree/master/src/moduleUSB) - контроль usb от тонких клиентов
 
 ## Идеи
 По задумке хотел реализовать следующие идеи:
@@ -56,11 +56,14 @@
 * Префиксы для Vuex:
     * actionPrefix: 'SOCKET_' для удобного взаимодействия с сокетами.
     * mutationPrefix: 'SOCKET_' для удобного взаимодействия с сокетами. Например  SOCKET_RETURN_NEWS сработает при передачи в сокет с bakend 'RETURN_NEWS'
-* Сокеты в Vue как отдельное свойство обьекта на ряду с methods и т.д. Пример:      '''sockets: {
-'''    connect: function () {
-'''      console.log("socket connected");
-'''    }
-'''}
+* Сокеты в Vue как отдельное свойство обьекта на ряду с methods и т.д. Пример:      
+```
+sockets: {
+    connect: function () {
+      console.log("socket connected");
+    }
+}
+```
 * Для отправки в сокет данные `this._vm.$socket.emit(EVENT, DATA)`
 * В локальном хранилище информация о пользователе:
     * token
