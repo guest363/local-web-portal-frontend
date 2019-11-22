@@ -1,12 +1,12 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
-import usb from './modules/usb';
-import wiki from './modules/wiki';
+import usb from '../moduleUSB/store/index';
+import wiki from '../moduleWiki/store/index';
 import monitoring from './modules/monitoring';
 import shoot from './modules/shoot';
 import persone from './modules/persone';
-import news from './modules/news';
+import news from '../moduleNews/store/index';
 import alert from './modules/alert';
 import auth from './modules/auth';
 
@@ -15,7 +15,7 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
 
   state: {
-    portalName: 'ООО Компания'
+    portalName: 'Компания'
   },
   mutations: {
     add(state, data) {

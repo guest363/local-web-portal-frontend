@@ -1,5 +1,5 @@
 import context from '../context';
-const url = `${context.url}/person`;
+const url = `${context.url}/api/persons/person`;
 const api = {
 
     async get(id) {

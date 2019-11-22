@@ -19,14 +19,18 @@ const mutations = {
 
 const actions = {
     GET_HOSTS: async (context) => {
-        const unsortHosts = await backend.getHosts();
+        const unsortHosts = await backend.GET();
         const sortedHosts = unsortHosts.data.sort((i1, i2) => {
             return i1.name > i2.name ? 1 : -1;
         });
         context.commit('SAVE_HOSTS', sortedHosts);
     },
     ADD_HOST: async (context, newHost) => {
-        const result = await backend.addHost(newHost);
+        const result = await backend.POST(newHost);
+        return result;
+    },
+    DELETE_HOST: async (context, newHost) => {
+        const result = await backend.DELETE(newHost);
         return result;
     },
 };

@@ -22,7 +22,7 @@
                 </tr>
             </tbody>
         </table>
-        <button @click="showModal">Дабавить пользователя</button>
+        <button @click="showModal(person)">Дабавить пользователя</button>
         <!-- ======================== Modal ================================ -->
         <modal :prop="person" v-show="isShowModal" @close="closeModal">
             <template v-slot:header>

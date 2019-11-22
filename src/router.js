@@ -10,17 +10,17 @@ const router = new Router({
     routes: [{
         path: '/',
         name: 'Главная страница портала',
-        component: () => import('./views/wiki/wiki.vue'),
+        component: () => import('./moduleWiki/views/index.vue'),
     },
     {
         path: '/news',
         name: 'Новости Центра',
-        component: () => import('./views/news/News.vue'),
+        component: () => import('./moduleNews/views/index.vue'),
     },
     {
         path: '/wiki',
         name: 'Локальная Википедия',
-        component: () => import('./views/wiki/wiki.vue'),
+        component: () => import('./moduleWiki/views/index.vue'),
     },
     {
         path: '/userPanel',
@@ -30,7 +30,7 @@ const router = new Router({
     {
         path: '/wiki/:name',
         name: 'Добаввление новой записи в Википедию',
-        component: () => import('./views/wiki/wiki-add.vue'),
+        component: () => import('./moduleWiki/views/wiki-add.vue'),
     },
     {
         path: '/shoot',
@@ -45,32 +45,10 @@ const router = new Router({
     {
         path: '/bigbrother',
         name: 'Большой брат',
-        component: () => import('./views/bigBrother/bigBrother.vue'),
+        component: () => import('./moduleUSB/views/index.vue'),
     }
     ],
 });
-/* 
-router.beforeEach((to, from, next) => {
-    let requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
-    let requiresAdmin = to.matched.some(
-      (record) => record.meta.accessTo === 'ADMIN',
-    );
-    const isAdmin = store.getters.getRoles.includes('ADMIN');
-    if (requiresAuth) {
-      if (requiresAdmin && !isAdmin) {
-        next('/');
-        return;
-      }
-      if (authenticated) {
-        next();
-        return;
-      }
-      next('/');
-    } else {
-      next();
-    }
-  }); */
-
 
 export default router;
 

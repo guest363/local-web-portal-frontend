@@ -1,4 +1,5 @@
 import context from '../context';
+const url = `${context.url}/api/monitoring`;
 const api = {
     /**
          * @description Добавить хост для мониторинга
@@ -9,12 +10,12 @@ const api = {
          * @returns {object} ответ от сервера
          *
     */
-    async addHost(host) {
+    async POST(host) {
         const config = {
             method: 'POST',
             data: host,
             withCredentials: true,
-            url: `${context.url}/ping`,
+            url: `${url}/hosts`,
             headers: context.headers
         }
         return await context.tryCatchFunctionAxios(config);
@@ -25,11 +26,26 @@ const api = {
          * @returns {object} ответ от сервера
          *
     */
-    async getHosts() {
+    async GET() {
         const config = {
             method: 'GET',
-            url: `${context.url}/ping`,
+            url: `${url}/hosts`,
             headers: context.headersNoAuth
+        }
+        return await context.tryCatchFunctionAxios(config);
+    },
+    /**
+        * @description Получить статус всех хостов
+        * @returns {object} ответ от сервера
+        *
+   */
+    async DELETE(host) {
+        const config = {
+            method: 'DELETE',
+            withCredentials: true,
+            data: host,
+            url: `${url}/hosts`,
+            headers: context.headers
         }
         return await context.tryCatchFunctionAxios(config);
     },

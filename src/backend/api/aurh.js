@@ -1,4 +1,5 @@
 import context from '../context';
+const url = `${context.url}/api/auth`;
 const api = {
     /**
          * @description Добавить хост для мониторинга
@@ -13,7 +14,7 @@ const api = {
             method: 'POST',
             data: user,
             withCredentials: true,
-            url: `${context.url}/login`,
+            url: `${url}/login`,
             headers: context.headersNoAuth
         }
         return await context.tryCatchFunctionAxios(config);
@@ -29,7 +30,7 @@ const api = {
             method: 'POST',
             data: user,
             withCredentials: true,
-            url: `${context.url}/user`,
+            url: `${url}/user`,
             headers: context.headersNoAuth
         }
         return await context.tryCatchFunctionAxios(config);
