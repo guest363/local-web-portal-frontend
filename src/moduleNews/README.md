@@ -8,7 +8,7 @@
 ## Как подключить
 * Добавить модуль хранилища в VUEX проекта ~/store/index.js
 * Добавить в Vue Router маршруты до:
-    * ~/views/news.vue - и отображение и редактирование новостей
+    * ~/views/index.vue - и отображение и редактирование новостей
 
 
 ## Взаимодействие с bakend
@@ -16,10 +16,10 @@
 
 ## Как выглядит
 ### Лента новостей
-![Лента новостей](https://github.com/guest363/local-web-portal-frontend/blob/master/forReadmi/news/news-feed.jpg)
+![Лента новостей](https://github.com/guest363/local-web-portal-frontend/blob/master/src/moduleNews/assets/readme/news-feed.jpg)
 
 ### Просмотр новости
-![Просмотр новости](https://github.com/guest363/local-web-portal-frontend/blob/master/forReadmi/news/news.jpg)
+![Просмотр новости](https://github.com/guest363/local-web-portal-frontend/blob/master/src/moduleNews/assets/readme/news.jpg)
 
 ### Редактирование новости
-![Просмотр статьи](https://github.com/guest363/local-web-portal-frontend/blob/master/forReadmi/news/news-edit.jpg)
+![Просмотр статьи](https://github.com/guest363/local-web-portal-frontend/blob/master/src/moduleNews/assets/readme/news-edit.jpg)

@@ -1,7 +1,7 @@
 {
-  "name": "cssi-local",
+  "name": "local-portal-frontend",
   "version": "0.0.2",
-  "description": "Local portal",
+  "description": "Локальный портал",
   "author": "Oleg Moiseev",
   "private": true,
   "scripts": {

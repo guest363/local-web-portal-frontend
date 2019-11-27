@@ -25,7 +25,7 @@ const router = new Router({
     {
         path: '/userPanel',
         name: 'Панель пользователя',
-        component: () => import('./views/userPanel/userPanel.vue'),
+        component: () => import('./moduleUserPanel/views/index.vue'),
     },
     {
         path: '/wiki/:name',
@@ -35,12 +35,12 @@ const router = new Router({
     {
         path: '/shoot',
         name: 'Контроль стрельб',
-        component: () => import('./views/shoot/Shoot.vue'),
+        component: () => import('./moduleShoot/views/index.vue'),
     },
     {
         path: '/monitoring',
         name: 'Администрирование сети ЗЛВС',
-        component: () => import('./views/monitoring/monitoring.vue'),
+        component: () => import('./moduleMonitoring/views/index.vue'),
     },
     {
         path: '/bigbrother',

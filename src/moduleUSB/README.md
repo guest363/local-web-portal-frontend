@@ -19,13 +19,13 @@
 
 ## Как выглядит
 ### Нарушения политики безопасности
-![Нарушения политики безопасности](https://github.com/guest363/local-web-portal-frontend/blob/master/forReadmi/bb/alert.jpg)
+![Нарушения политики безопасности](https://github.com/guest363/local-web-portal-frontend/blob/master/src/moduleUSB/assets/readme/alert.jpg)
 
 ### Белый список устройст 
-![Белый список устройст ](https://github.com/guest363/local-web-portal-frontend/blob/master/forReadmi/bb/white.jpg)
+![Белый список устройст ](https://github.com/guest363/local-web-portal-frontend/blob/master/src/moduleUSB/assets/readme/white.jpg)
 
 ### Примонтированные устройства
-![Примонтированные устройства](https://github.com/guest363/local-web-portal-frontend/blob/master/forReadmi/bb/mount.jpg)
+![Примонтированные устройства](https://github.com/guest363/local-web-portal-frontend/blob/master/src/moduleUSB/assets/readme/mount.jpg)
 
 ### Редактирование носителя
-![Редактирование носителя](https://github.com/guest363/local-web-portal-frontend/blob/master/forReadmi/bb/edit.jpg)
+![Редактирование носителя](https://github.com/guest363/local-web-portal-frontend/blob/master/src/moduleUSB/assets/readme/edit.jpg)

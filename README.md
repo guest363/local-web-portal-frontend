@@ -70,5 +70,5 @@ sockets: {
     * displayName
     * role
 
-
-![пример того как выглядит](https://github.com/guest363/local-web-portal-frontend/blob/master/forReadmi/main.png)
+## Как выглядит
+![Пример того как выглядит](https://github.com/guest363/local-web-portal-frontend/blob/master/src/assets/readme/main.png)
